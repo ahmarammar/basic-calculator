@@ -35,11 +35,16 @@ numbersButtons.map((indexValue) => {
         displayValue = displayValue + indexValue.textContent;
         display.innerHTML = displayValue;
 
+        if(secondNumber !== null){
+            secondNumber = + (secondNumber +  displayValue.slice(displayValue.length-1,displayValue.length));
+            console.log(secondNumber);
+        }
+
         // first number is assigned but the second one is not assigned
         if(firstNumber !== null && secondNumber === null){
             secondNumber = + displayValue.slice(displayValue.length-1,displayValue.length);
-            console.log(secondNumber);
         }
+        
     })
 })
 

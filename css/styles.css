@@ -28,7 +28,7 @@ body{
     background-color: #fff;
 }
 .numbers{
-    width: 150px;
+    width: 200px;
     display: flex;
     flex-wrap: wrap;
     gap: 0.5em;

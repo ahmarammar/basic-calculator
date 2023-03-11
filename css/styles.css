@@ -4,8 +4,8 @@
     box-sizing: border-box;
 }
 body{
-    /* height: 100%;
-    width: 100%; */
+    height: 100%;
+    width: 100%;
     font-family: sans-serif;
 }
 .calculator{
@@ -21,7 +21,7 @@ body{
     justify-content: center;
     align-items: center;
     gap: 4em;
-    width: 400px;
+    width: min(100%, 400px);
     border-left: 2px solid black;
     border-right: 2px solid black;
     padding: 2em;
@@ -40,7 +40,7 @@ body{
 }
 .displayResult{
     border: 2px solid black;
-    width: 400px;
+    width: min(100%, 400px);
     height: 8vh;
     padding: 1em;
     text-align: center;
@@ -52,7 +52,7 @@ body{
 }
 .equal{
     border: 2px solid black;
-    width: 400px;
+    width: min(100%, 400px);
     text-align: center;
     padding: 2em;
     background-color: antiquewhite;

@@ -62,8 +62,6 @@ operatorsButtons.map((indexValue) => {
         if(firstNumber === null){
             firstNumber = + displayValue.slice(0,displayValue.length-1);
             operand = displayValue.slice(firstNumber.toString(10).length,displayValue.length);
-            console.log(`first number : ${firstNumber}`);
-            console.log(`operand : ${operand}`);
         }
         
         // firstnumber and secondnumber assigned completely
@@ -96,5 +94,10 @@ clearButton.addEventListener("click", (e) => {
 const equalButton = document.querySelector(".equalBtn");
 equalButton.addEventListener("click", (e) => {
     secondNumber = + displayValue.slice(displayValue.indexOf(operand)+1,displayValue.length);
-    display.innerHTML = operate(firstNumber,secondNumber,operand);
+    let result = operate(firstNumber,secondNumber,operand);
+    result = result.toString();
+    if(result.includes(".")){
+        result = result.slice(0,result.indexOf(".")+5);
+    }
+    display.innerHTML = result;
 })
